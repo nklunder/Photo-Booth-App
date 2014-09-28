@@ -31,9 +31,18 @@ window.addEventListener("DOMContentLoaded", function() {
     }, errBack);
   }
 
+  // reset #flash-bulb after 400ms delay
+
+
   // Trigger photo take
   document.getElementById("snap").addEventListener("click", function() {
     flashBulb.className = "flash-active";
+    // reset #flash-bulb after 400ms delay
+    function resetFlash() {
+      flashBulb.className = "flash-ready";
+      setTimeout(resetFlash, 400);
+      return;
+    }
     setTimeout(resetFlash, 400);
     snapSound.load();
     snapSound.play();
@@ -45,10 +54,5 @@ window.addEventListener("DOMContentLoaded", function() {
     var dataURL = canvas.toDataURL("image/png");
     downloadButton.href = dataURL;
   });
-
-function resetFlash() {
-  flashBulb.className = "flash-ready";
-}
-
 
 }, false);
