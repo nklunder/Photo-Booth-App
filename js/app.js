@@ -39,9 +39,6 @@ window.addEventListener("DOMContentLoaded", function() {
   // Trigger photo take
   document.getElementById("snap").addEventListener("click", function() {
     flashBulb.className = "flash-active";
-    function resetFlash() {
-      flashBulb.className = "flash-ready";
-    }
     setTimeout(resetFlash, 400);
     snapSound.load();
     snapSound.play();
