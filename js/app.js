@@ -1,11 +1,12 @@
 window.addEventListener("DOMContentLoaded", function() {
 
   // Grab elements, create settings, etc.
-  var downloadButton = document.getElementById("download-button")
+  var downloadButton = document.getElementById("download-button");
   var snapSound = document.getElementById("snap-sound");
   var canvas = document.getElementById("canvas");
   var context = canvas.getContext("2d");
   var video = document.getElementById("video");
+  var flashBulb = document.getElementById("flash-bulb");
   var videoObj = { "video": true };
   var errBack = function(error) {
     console.log("Video capture error: ", error.code);
@@ -32,6 +33,8 @@ window.addEventListener("DOMContentLoaded", function() {
 
   // Trigger photo take
   document.getElementById("snap").addEventListener("click", function() {
+    flashBulb.className = "flash-active";
+    setTimeout(resetFlash, 400);
     snapSound.load();
     snapSound.play();
     context.drawImage(video, 0, 0, 640, 480);
@@ -42,5 +45,10 @@ window.addEventListener("DOMContentLoaded", function() {
     var dataURL = canvas.toDataURL("image/png");
     downloadButton.href = dataURL;
   });
+
+function resetFlash() {
+  flashBulb.className = "flash-ready";
+}
+
 
 }, false);

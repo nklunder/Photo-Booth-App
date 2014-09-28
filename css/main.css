@@ -27,24 +27,39 @@ h1 {
 
 /* MODULE
 ********************/
-
-.top-nav {
-  margin-top: 1em;
-  color: #F5F7AD;
-  font-size: 1.4em;
-  text-align: center;
-  display: block;
-  text-decoration: none;
+.video-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 360px;
 }
 
-.top-nav:hover {
-  color: #D9E00D;
+.flash-ready {
+  position: absolute;
+  border-radius: 1rem 1rem 0 0;
+  width: 360px;
+  height: 270px;
+  background: white;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.flash-active {
+  position: absolute;
+  border-radius: 1rem 1rem 0 0;
+  width: 360px;
+  height: 270px;
+  background: transparent;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: background-color 0.4s;
 }
 
 video {
+
   display: block;
   background: #4A4A4A;
-  margin: 0 auto;
   border-radius: 1rem 1rem 0 0;
   border: 3px solid #fff;
   border-bottom: none;
@@ -89,7 +104,6 @@ p {
   letter-spacing: 1px;
   font-weight: 700;
   outline: none;
-  position: relative;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
