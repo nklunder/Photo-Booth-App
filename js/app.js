@@ -32,16 +32,15 @@ window.addEventListener("DOMContentLoaded", function() {
   }
 
   // reset #flash-bulb after 400ms delay
-
+  function resetFlash() {
+    flashBulb.className = "flash-ready";
+  }
 
   // Trigger photo take
   document.getElementById("snap").addEventListener("click", function() {
     flashBulb.className = "flash-active";
-    // reset #flash-bulb after 400ms delay
     function resetFlash() {
       flashBulb.className = "flash-ready";
-      setTimeout(resetFlash, 400);
-      return;
     }
     setTimeout(resetFlash, 400);
     snapSound.load();
