@@ -10,14 +10,22 @@
   <h1>PHOTO BOOTH</h1>
   <div class="video-wrapper">
     <div id="flash-bulb" class="flash-ready"></div>
-    <video id="video" width="360" height="270" autoplay></video>
+    <video id="video" class="hidden" width="640" height="480" autoplay></video>
+    <canvas id="buffer" class="hidden" width="640" height="480"></canvas>
+    <canvas id="display" class="capture-video" width="640" height="480"></canvas>
     <button id="snap" class="btn">Snap Photo</button>
+  </div>
+  <div class="effects">
+    <button class="effect" id="normal">Normal</button>
+    <button class="effect" id="western">Western</button>
+    <button class="effect" id="noir">Noir</button>
+    <button class="effect" id="scifi">Sci-Fi</button>
   </div>
   <p>
     Scroll down to see your photo.<br>
     <span class="finger">&#9759;</span>
   </p>
-  <canvas id="canvas" width="640" height="480"></canvas>
+  <canvas id="canvas" class="capture-photo" width="640" height="480"></canvas>
   <a role="button" id="download-button" class="btn save-btn" download="myphoto.png">Save Photo</a>
   <audio id="snap-sound" preload="auto">
     <source src="sounds/camera-shutter-click.mp3" type='audio/mpeg; codecs="mp3"'>
