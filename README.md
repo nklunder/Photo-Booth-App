@@ -1,5 +1,5 @@
 # Photo Booth
-==================
+
 Capture photos using the HTML5 getUserMedia API
 
 Features
