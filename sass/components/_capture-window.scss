@@ -1,0 +1,44 @@
+.video-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 360px;
+}
+
+.capture-video {
+  display: block;
+  background: #4A4A4A;
+  border-radius: 1rem 1rem 0 0;
+  border: 3px solid #fff;
+  border-bottom: none;
+  width: 360px;
+  height: 270px;
+}
+
+.capture-photo {
+  display: block;
+  background: lightgray;
+  border: 1.6em solid white;
+  border-bottom: 8em solid white;
+  margin: 12em auto 2em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.flash-ready {
+  position: absolute;
+  border-radius: 1rem 1rem 0 0;
+  width: 360px;
+  height: 270px;
+  background: white;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: white;
+}
+
+.flash-active {
+  @extend .flash-ready;
+  opacity: 1;
+  background: transparent;
+  transition: background-color 0.4s;
+}
