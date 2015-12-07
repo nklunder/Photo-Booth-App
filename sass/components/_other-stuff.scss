@@ -1,0 +1,43 @@
+.effects {
+  text-align: center;
+}
+
+.finger {
+  font-size: 3em;
+}
+
+/* Photo Capture Button Styles */
+.btn {
+  width: 360px;
+  border: 3px solid #fff;
+  border-radius: 0 0 1em 1em;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: #71C9D1;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  &:hover, &:active {
+    color: #39B4BF;
+    background: #fff;
+  }
+}
+
+/* Save Photo Button Modifications */
+.save-btn {
+  text-align: center;
+  text-decoration: none;
+  border-radius: 1em;
+  margin-bottom: 4em;
+  width: 260px;
+  padding: 25px 40px;
+}

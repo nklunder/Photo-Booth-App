@@ -1,0 +1,39 @@
+/* BASE
+********************/
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* LAYOUT
+********************/
+
+body {
+  background: #39B4BF;
+  color: white;
+}
+
+h1 {
+  margin: .5em 0 0.2em 0;
+  padding: 0;
+  font-size: 4em;
+  font-family: 'Luckiest Guy', cursive;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin: 0.7em auto;
+  width: 70%;
+  font-size: 1.8em;
+  line-height: 1.3;
+}
